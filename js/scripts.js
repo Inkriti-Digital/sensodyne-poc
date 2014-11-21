@@ -9,7 +9,7 @@ $( document ).ready(function() {
 	//AUTO MOVE ELEMENTS
 	function initParallax() {
 
-		function moveLevel1() {
+		function moveLevels() {
 			var speed1 = mouseX/200;
 			var speed2 = mouseX/400;
 			var speed3 = mouseX/600;
@@ -19,7 +19,8 @@ $( document ).ready(function() {
 			$(".layer3").css( "left", "-="+speed3 );
 		}
 
-		setInterval(moveLevel1, 10) // running the function wrapper every 1,5 minute.
+		// running the function wrapper every 0.1 seconds.
+		setInterval(moveLevels, 10) 
 	}
 
 	//GET MOUSE POSITION WHEN OVER GALLERY CONTAINER ELEMENT
