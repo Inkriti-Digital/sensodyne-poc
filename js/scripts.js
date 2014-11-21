@@ -13,14 +13,13 @@ $( document ).ready(function() {
 			var speed1 = mouseX/200;
 			var speed2 = mouseX/400;
 			var speed3 = mouseX/600;
-			// console.log('movespeed = ' + speed1);
-			$("#level1-card-tumb").css( "left", "-="+speed1 );
-			$("#level2-card-tumb").css( "left", "-="+speed2 );
-			$("#level3-card-tumb").css( "left", "-="+speed3 );
+
+			$(".layer1").css( "left", "-="+speed1 );
+			$(".layer2").css( "left", "-="+speed2 );
+			$(".layer3").css( "left", "-="+speed3 );
 		}
 
-		 setInterval(moveLevel1, 5) // running the function wrapper every 1,5 minute.
-
+		setInterval(moveLevel1, 10) // running the function wrapper every 1,5 minute.
 	}
 
 	//GET MOUSE POSITION WHEN OVER GALLERY CONTAINER ELEMENT
@@ -34,4 +33,3 @@ $( document ).ready(function() {
 
 	initParallax();
 });
-
