@@ -9,8 +9,6 @@ $( document ).ready(function() {
 	//AUTO MOVE ELEMENTS
 	function initParallax() {
 
-		//moveLevel1();
-
 		function moveLevel1() {
 			var speed1 = mouseX/200;
 			var speed2 = mouseX/400;
@@ -25,8 +23,6 @@ $( document ).ready(function() {
 
 	}
 
-	
-
 	//GET MOUSE POSITION WHEN OVER GALLERY CONTAINER ELEMENT
 	$("#gallery-container").mousemove(function(e) {
 		var offset = $('.inner-gallery').offset();
@@ -34,14 +30,7 @@ $( document ).ready(function() {
 	  	mouseY = (e.pageY - offset.top);
 
 	  	console.log('mouseX ' + mouseX);
-
-	  	// $( "#level1-card-tumb" ).animate({ left: "-=10" });
-
-		// console.log("X: " + mouseX + "  Y: " + mouseY);
-
-		// initParallax();
 	});
-
 
 	initParallax();
 });
