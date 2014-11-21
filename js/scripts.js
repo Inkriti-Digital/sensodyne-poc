@@ -1,12 +1,9 @@
-
 //INKRITI ETERNAL PARALLAX GALLERY
-
 $( document ).ready(function() {
 
 	var mouseX = 5;
-	var mouseY;
 
-	//AUTO MOVE ELEMENTS
+	//AUTO MOVE ELEMENTS INIT
 	function initParallax() {
 
 		function moveLevels() {
@@ -19,7 +16,7 @@ $( document ).ready(function() {
 			$(".layer3").css( "left", "-="+speed3 );
 		}
 
-		// running the function wrapper every 0.1 seconds.
+		// running the function moveLevels() every 0.1 seconds.
 		setInterval(moveLevels, 10) 
 	}
 
@@ -28,9 +25,6 @@ $( document ).ready(function() {
 		var offset = $('.inner-gallery').offset();
 	  	mouseX = (e.pageX - offset.left);
 	  	mouseY = (e.pageY - offset.top);
-
-	  	console.log('mouseX ' + mouseX);
 	});
-
 	initParallax();
 });
